@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name">FireMessenger</string>
+
+    <!-- ********************Button******************** -->
+    <!-- Registration -->
+    <string name="btn_register">Register</string>
+    <string name="btn_sign_in">Sign In</string>
+
+    <!-- Login -->
+    <string name="btn_login">Login</string>
+    <string name="btn_forgot_password">Forgot Password</string>
+    <string name="btn_sign_up">New Account</string>
+
+
+    <!-- ********************Text View / Label******************** -->
+    <!-- Registration -->
+    <string name="lbl_having_problem">Having problem logging in?</string>
+    <string name="lbl_already_have_account">Already have an account?</string>
+    <string name="lbl_register">R E G I S T E R</string>
+
+    <!-- Login -->
+    <string name="lbl_login_welcome">L O G I N</string>
+    <string name="lbl_login_continue_login">Please login to continue.</string>
+    <string name="lbl_login_register">Not yet registered?</string>
+
+    <!-- SplashScreen -->
+    <string name="lbl_power_by">Power by</string>
+    <string name="lbl_desmond">Desmond_Wong</string>
+    <string name="lbl_INLA">The-International Nature Loving Association</string>
+
+
+    <!-- ********************Text Field******************** -->
+    <!-- Registration -->
+    <string name="txt_register_username">Username</string>
+    <string name="txt_register_email">Email</string>
+    <string name="txt_register_password">Password</string>
+    <string name="txt_register_confirm_password">Confirm Password</string>
+    <string name="txt_register_contact_number">Contact Number</string>
+    <string name="txt_register_age">Age</string>
+
+    <!-- Login -->
+    <string name="txt_login_email">Email</string>
+    <string name="txt_login_password">Password</string>
+    <string name="nav_home">Home</string>
+    <string name="nav_notification">Notification</string>
+    <string name="nav_about">About Us</string>
+    <string name="nav_more">More</string>
+
+</resources>

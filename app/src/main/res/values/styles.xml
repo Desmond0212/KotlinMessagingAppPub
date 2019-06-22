@@ -1,0 +1,13 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/top_header</item>colorPrimary
+        <item name="colorPrimaryDark">@color/top_header</item>colorPrimaryDark
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="textInputStyle">@style/Widget.Design.TextInputLayout</item>
+    </style>
+
+</resources>

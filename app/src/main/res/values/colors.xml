@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--<color name="colorPrimary">#008577</color>-->
+    <!--<color name="colorPrimaryDark">#00574B</color>-->
+    <!--<color name="colorAccent">#D81B60</color>-->
+
+    <color name="colorPrimary">#018786</color>
+    <color name="colorPrimaryDark">#018786</color>
+    <color name="colorAccent">#018786</color>004D40
+    <color name="top_header">#E0F2F1</color>424242
+
+    <color name="layout_bg_color">#E0F2F1</color>
+    <color name="txt_power_by">#424242</color>
+    <color name="txt_INLA">#424242</color>
+
+    <color name="lbl_login_continue">#424242</color>
+    <color name="lbl_welcome">#004D40</color>
+
+    <color name="btn_sign_up">#424242</color>
+
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorWhiteTransparent">#80ffffff</color>
+    <color name="colorBlack">#424242</color>
+
+    <color name="general_grey_border">#E4E4E4</color>
+    <color name="nav_items">#424242</color>
+</resources>
