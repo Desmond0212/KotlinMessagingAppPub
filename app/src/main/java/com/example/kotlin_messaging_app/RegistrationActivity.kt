@@ -31,9 +31,6 @@ class RegistrationActivity : AppCompatActivity()
 
             Log.d("RegistrationActivity: ", "Go back to LoginActivity.")
             finish()
-
-//            val intent = Intent(this, LoginActivity::class.java)
-//            startActivity(intent)
         }
 
         btnRegister.setOnClickListener {
@@ -164,10 +161,18 @@ class RegistrationActivity : AppCompatActivity()
         ref.setValue(user)
             .addOnSuccessListener{
                 Log.d("RegistrationActivity", "User data saved to Firebase Database!")
-            }
 
-        Log.d("RegistrationActivity", "User data couldn't save to Firebase Database!")
+                val intent = Intent(this, LatestMessagesActivity::class.java)
+                intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK.or(Intent.FLAG_ACTIVITY_NEW_TASK)
+                startActivity(intent)
+            }
+            .addOnFailureListener{
+                Log.d("RegistrationActivity", "User data couldn't save to Firebase Database!: ${it.message}")
+            }
     }
 }
 
 class User (val uid: String, val username: String, val profileimageUrl: String)
+{
+    constructor(): this("","","")
+}

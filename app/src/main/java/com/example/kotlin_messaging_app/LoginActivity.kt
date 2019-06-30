@@ -40,7 +40,7 @@ class LoginActivity : AppCompatActivity()
         }
 
         btnLogin.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, LatestMessagesActivity::class.java)
             startActivity(intent)
         }
 
