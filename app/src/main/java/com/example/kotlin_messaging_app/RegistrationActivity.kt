@@ -12,6 +12,7 @@ import android.support.v4.content.ContextCompat
 import android.util.Log
 import android.view.View
 import android.widget.Toast
+import com.example.kotlin_messaging_app.VO.UserVO
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.storage.FirebaseStorage
@@ -156,7 +157,7 @@ class RegistrationActivity : AppCompatActivity()
         val uid = FirebaseAuth.getInstance().uid?: ""
         val ref = FirebaseDatabase.getInstance().getReference("/users/$uid")
 
-        val user = User(uid, txtRegister_Username.text.toString(), profileImageUrl)
+        val user = UserVO(uid, txtRegister_Username.text.toString(), profileImageUrl)
 
         ref.setValue(user)
             .addOnSuccessListener{
@@ -172,7 +173,7 @@ class RegistrationActivity : AppCompatActivity()
     }
 }
 
-class User (val uid: String, val username: String, val profileimageUrl: String)
+/*class User (val uid: String, val username: String, val profileimageUrl: String)
 {
     constructor(): this("","","")
-}
+}*/

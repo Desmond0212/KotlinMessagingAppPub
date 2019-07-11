@@ -14,12 +14,11 @@
         <activity
                 android:name=".LatestMessagesActivity"
                 android:theme="@style/Base.Theme.AppCompat.Light.DarkActionBar"/>
-            <!--<intent-filter>-->
-                <!--<action android:name="android.intent.action.MAIN"/>-->
-
-                <!--<category android:name="android.intent.category.LAUNCHER"/>-->
-            <!--</intent-filter>-->
-        <!--</activity>-->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="android.intent.action.MAIN"/> -->
+        <!-- <category android:name="android.intent.category.LAUNCHER"/> -->
+        <!-- </intent-filter> -->
+        <!-- </activity> -->
         <activity android:name=".SplashScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -34,12 +33,20 @@
 
         <activity android:name=".RegistrationActivity"/>
         <activity android:name=".LoginActivity"/>
-
-        <activity android:name=".NewMessageActivity"
-                  android:theme="@style/Base.Theme.AppCompat.Light.DarkActionBar"
-                  android:parentActivityName=".LatestMessagesActivity">
-            <meta-data android:name="android.support.PARENT_ACTIVITY"
-            android:value=".LatestMessagesActivity"/>
+        <activity
+                android:name=".NewMessageActivity"
+                android:parentActivityName=".LatestMessagesActivity"
+                android:theme="@style/Base.Theme.AppCompat.Light.DarkActionBar">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value=".LatestMessagesActivity"/>
+        </activity>
+        <activity android:name=".ChatRoomActivity"
+                  android:parentActivityName=".NewMessageActivity"
+                  android:theme="@style/Base.Theme.AppCompat.Light.DarkActionBar">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value=".NewMessageActivity"/>
         </activity>
 
         <activity android:name=".MainActivity"/>

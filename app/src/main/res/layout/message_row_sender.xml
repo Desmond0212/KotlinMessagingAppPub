@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_message_row_sender"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:srcCompat="@mipmap/wonderland_circle_icon"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp"/>
+
+    <TextView
+            android:id="@+id/txt_message_content_message_row_sender"
+            android:text="This is my message. Kotlin Messaging App with Google Firebase."
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:maxWidth="250dp"
+            app:layout_constraintEnd_toStartOf="@+id/img_message_row_sender"
+            android:layout_marginStart="8dp"
+            app:layout_constraintTop_toTopOf="@+id/img_message_row_sender"/>
+
+</android.support.constraint.ConstraintLayout>
