@@ -7,9 +7,12 @@ import android.os.Bundle
 import android.support.annotation.RequiresApi
 import android.support.design.widget.TextInputLayout
 import android.support.v4.content.ContextCompat
+import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Toast
+import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_login.*
 
 class LoginActivity : AppCompatActivity()
@@ -40,8 +43,7 @@ class LoginActivity : AppCompatActivity()
         }
 
         btnLogin.setOnClickListener {
-            val intent = Intent(this, LatestMessagesActivity::class.java)
-            startActivity(intent)
+            performLogin()
         }
 
         //Set android status bar color
@@ -54,5 +56,30 @@ class LoginActivity : AppCompatActivity()
         {
             window.statusBarColor = ContextCompat.getColor(this, R.color.colorBlack)
         }
+    }
+
+    private fun performLogin() {
+        val email = txtLogin_Username.text.toString()
+        val password = txtLogin_Password.text.toString()
+
+        if (email.isEmpty() || password.isEmpty())
+        {
+            Toast.makeText(this, "Please fill out email/pw.", Toast.LENGTH_SHORT).show()
+            return
+        }
+
+        FirebaseAuth.getInstance().signInWithEmailAndPassword(email, password)
+            .addOnCompleteListener {
+                if (!it.isSuccessful) return@addOnCompleteListener
+
+                Log.d("Login", "Successfully logged in: ${it.result.user.uid}")
+
+                val intent = Intent(this, LatestMessagesActivity::class.java)
+                intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK.or(Intent.FLAG_ACTIVITY_NEW_TASK)
+                startActivity(intent)
+            }
+            .addOnFailureListener {
+                Toast.makeText(this, "Failed to log in: ${it.message}", Toast.LENGTH_SHORT).show()
+            }
     }
 }
