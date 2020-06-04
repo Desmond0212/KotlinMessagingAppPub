@@ -21,7 +21,7 @@
                 android:layout_height="180dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="100dp"
-                app:srcCompat="@drawable/app_icon" />
+                app:srcCompat="@drawable/app_icon_transparent" />
 
         <TextView
                 android:id="@+id/lblINLA"
